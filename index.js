@@ -8,9 +8,9 @@ const app = express();
 app.use(cors());
 
 // for parsing application/json
-//app.use(bodyParser.json()); 
+app.use(bodyParser.json()); 
 // for parsing application/xwww-
-//app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Define routes
 app.use("/messages", messagesRouter);
