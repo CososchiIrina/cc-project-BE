@@ -90,13 +90,14 @@ router.delete("/:id", (req, res) => {
 //update view_count
 router.put("/:id", (req, res) => {
     const { id } = req.params;
+    console.log(req.body);
     const {
         view_count, 
     } = req.body;
 
     if (!view_count) {
         return res.status(400).json({
-            error: "All fields are required",
+            error: "view_count is required",
         })
     }
 
